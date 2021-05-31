@@ -1,0 +1,7 @@
+﻿{
+  "Mod_Name": "TOGSlowMotion",
+  "Author": "lilhusky",
+  "dllName": "TOGSlowMotion",
+  "className": "SlowmoPatch",
+  "startMethod": "Inject"
+}

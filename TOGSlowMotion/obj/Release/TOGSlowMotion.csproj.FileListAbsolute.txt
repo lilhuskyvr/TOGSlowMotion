@@ -1,0 +1,7 @@
+C:\Users\nikon\RiderProjects\TOGSlowMotion\TOGSlowMotion\obj\Release\TOGSlowMotion.csprojResolveAssemblyReference.cache
+D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\StreamingAssets\Mods\TOGSlowMotion\TOGSlowMotion.dll
+D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\StreamingAssets\Mods\TOGSlowMotion\TOGSlowMotion.pdb
+C:\Users\nikon\RiderProjects\TOGSlowMotion\TOGSlowMotion\obj\Release\TOGSlowMotion.dll
+C:\Users\nikon\RiderProjects\TOGSlowMotion\TOGSlowMotion\obj\Release\TOGSlowMotion.pdb
+D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\StreamingAssets\Mods\TOGSlowMotion\script_assembly_desc.json
+D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\StreamingAssets\Mods\TOGSlowMotion\Settings.json
