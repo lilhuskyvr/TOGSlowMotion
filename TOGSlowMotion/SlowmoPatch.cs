@@ -52,19 +52,28 @@ namespace TOGSlowMotion
             [HarmonyPostfix]
             private static void Postfix(VRCharController __instance)
             {
-                var slowmoController = __instance.gameObject.GetComponent<SlowmoController>();
-                if (slowmoController.isSlowmo && Mathf.Approximately(Time.timeScale, 1))
-                    Time.timeScale = slowmoController.slowmoTimeScale;
-
-                if (__instance.controlInput.OrderController.ButtonAPressed)
+                try
                 {
-                    if (Time.time - __instance.gameObject.GetComponent<SlowmoController>().lastClicked >= 0.5f)
-                    {
-                        Time.timeScale = Mathf.Approximately(Time.timeScale, 1) ? slowmoController.slowmoTimeScale : 1;
+                    var slowmoController = __instance.gameObject.GetComponent<SlowmoController>();
+                    if (slowmoController.isSlowmo && Mathf.Approximately(Time.timeScale, 1))
+                        Time.timeScale = slowmoController.slowmoTimeScale;
 
-                        slowmoController.lastClicked = Time.time;
-                        slowmoController.isSlowmo = !Mathf.Approximately(Time.timeScale, 1);
+                    if (__instance.controlInput.OrderController.ButtonAPressed)
+                    {
+                        if (Time.time - __instance.gameObject.GetComponent<SlowmoController>().lastClicked >= 0.5f)
+                        {
+                            Time.timeScale = Mathf.Approximately(Time.timeScale, 1)
+                                ? slowmoController.slowmoTimeScale
+                                : 1;
+
+                            slowmoController.lastClicked = Time.time;
+                            slowmoController.isSlowmo = !Mathf.Approximately(Time.timeScale, 1);
+                        }
                     }
+                }
+                catch (Exception)
+                {
+                    //ignored
                 }
             }
         }
