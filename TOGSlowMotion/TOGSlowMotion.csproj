@@ -1,84 +1,87 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F951C927-9966-4AFB-B858-64F2AF4505FB}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TOGSlowMotion</RootNamespace>
-    <AssemblyName>TOGSlowMotion</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\StreamingAssets\Mods\TOGSlowMotion\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="0Harmony, Version=2.0.4.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\Lib.Harmony.2.0.4\lib\net472\0Harmony.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Assembly-CSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\Managed\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-      <HintPath>D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\Managed\System.Numerics.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.JSONSerializeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SlowmoController.cs" />
-    <Compile Include="SlowmoControllerData.cs" />
-    <Compile Include="SlowmoPatch.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="script_assembly_desc.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Settings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-               Other similar extension points exist, see Microsoft.Common.targets.
-          <Target Name="BeforeBuild">
-          </Target>
-          <Target Name="AfterBuild">
-          </Target>
-          -->
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{F951C927-9966-4AFB-B858-64F2AF4505FB}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>TOGSlowMotion</RootNamespace>
+        <AssemblyName>TOGSlowMotion</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\StreamingAssets\Mods\TOGSlowMotion\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="0Harmony, Version=2.0.4.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\packages\Lib.Harmony.2.0.4\lib\net472\0Harmony.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="Assembly-CSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\Managed\Assembly-CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+            <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Xml"/>
+        <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.JSONSerializeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="SlowmoController.cs"/>
+        <Compile Include="SlowmoControllerData.cs"/>
+        <Compile Include="SlowmoPatch.cs"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="script_assembly_desc.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Settings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="System.Data.dll">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="System.Numerics.dll">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="packages.config"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+                 Other similar extension points exist, see Microsoft.Common.targets.
+            <Target Name="BeforeBuild">
+            </Target>
+            <Target Name="AfterBuild">
+            </Target>
+            -->
 </Project>
