@@ -5,3 +5,5 @@ C:\Users\nikon\RiderProjects\TOGSlowMotion\TOGSlowMotion\obj\Release\TOGSlowMoti
 C:\Users\nikon\RiderProjects\TOGSlowMotion\TOGSlowMotion\obj\Release\TOGSlowMotion.pdb
 D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\StreamingAssets\Mods\TOGSlowMotion\script_assembly_desc.json
 D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\StreamingAssets\Mods\TOGSlowMotion\Settings.json
+D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\StreamingAssets\Mods\TOGSlowMotion\System.Data.dll
+D:\Steam\steamapps\common\Tales Of Glory\TalesOfGlory_Data\StreamingAssets\Mods\TOGSlowMotion\System.Numerics.dll

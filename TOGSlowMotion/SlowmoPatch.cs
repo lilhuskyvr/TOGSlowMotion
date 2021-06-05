@@ -27,9 +27,9 @@ namespace TOGSlowMotion
 
 
         [HarmonyPatch(typeof(VRCharController))]
-        [HarmonyPatch("Start")]
+        [HarmonyPatch("EnableAvatar")]
         // ReSharper disable once UnusedType.Local
-        private static class VRCharControllerStartPatch
+        private static class VRCharControllerEnableAvatarPatch
         {
             [HarmonyPostfix]
             private static void Postfix(VRCharController __instance)
@@ -39,7 +39,7 @@ namespace TOGSlowMotion
                                                  "/Mods/TOGSlowMotion/Settings.json");
                 
                 var data = JsonConvert.DeserializeObject<SlowmoControllerData>(jsonInput);
-                Debug.Log(data.slowmoTimeScale);
+                Debug.Log("Slowmo TimeScale: "+data.slowmoTimeScale);
                 slowmoController.slowmoTimeScale = data.slowmoTimeScale;
             }
         }
